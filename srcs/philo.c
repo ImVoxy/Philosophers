@@ -54,7 +54,7 @@ int	ft_init(t_args *args, char **av)
 	args->t_sleep = ft_atoi(av[4]);
 	args->stop_eat = 0;
 	args->ded = 0;
-	if (args->t_death < 0 || args->t_eat < 0
+	if (args->t_death < 0 || args->t_eat < 0 || args->nb_philos <= 0
 		|| args->t_sleep < 0 || args->nb_philos > 201)
 		return (1);
 	if (av[5])

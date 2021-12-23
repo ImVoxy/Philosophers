@@ -44,6 +44,9 @@ void	*ft_rout(void *v_philos)
 		usleep(15000);
 	while (!(args->ded))
 	{
+		if (args->stop_eat || (philo->nb_eat >= args->max_eat
+				&& args->max_eat != -1))
+			break ;
 		ft_diner(philo);
 		if (args->stop_eat || (philo->nb_eat >= args->max_eat
 				&& args->max_eat != -1))
